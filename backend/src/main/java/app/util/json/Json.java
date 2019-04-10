@@ -4,7 +4,6 @@ import app.util.Mensagem;
 import flexjson.JSONSerializer;
 import lombok.Getter;
 
-@Getter
 public class Json {
 
 	private Object data;
@@ -45,5 +44,21 @@ public class Json {
 		
 		public String mensagem;
 		public Object dados;
+	}
+
+	public Object getData() {
+		return data;
+	}
+
+	public void setData(Object data) {
+		this.data = data;
+	}
+
+	public JSONSerializer getJsonSerializer() {
+		return jsonSerializer;
+	}
+
+	public void setJsonSerializer(JSONSerializer jsonSerializer) {
+		this.jsonSerializer = jsonSerializer;
 	}
 }

@@ -3,6 +3,8 @@ package app.util.json;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
 import org.springframework.http.HttpInputMessage;
 import org.springframework.http.HttpOutputMessage;
 import org.springframework.http.MediaType;
@@ -61,10 +63,10 @@ public class JsonHttpMessageConverter extends AbstractHttpMessageConverter<Json>
 
 		if (jsonSerializer != null) {
 
-			outputStream.write(jsonSerializer.serialize(object).getBytes());
+			outputStream.write(jsonSerializer.serialize(object).getBytes())		;
 
 		} else {
-
+			this.defaultObjectMapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
 			this.defaultObjectMapper.writeValue(outputStream, object);
 		}
 
