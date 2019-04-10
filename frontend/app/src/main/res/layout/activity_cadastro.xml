@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:onClick="cadastrar"
-                android:text="Cadastrar" />
+                android:text="@string/cadastrar" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -55,5 +55,5 @@
         android:layout_above="@+id/li_layout_principal"
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
-        android:text="Cadastro de usuário" />
+        android:text="@string/cadastro_usuario" />
 </RelativeLayout>

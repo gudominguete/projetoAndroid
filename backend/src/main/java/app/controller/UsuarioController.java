@@ -33,7 +33,7 @@ public class UsuarioController {
 
     @PostMapping("/usuario/autenticar")
     public Json autenticar(String usuario, String senha) {
-
+        System.out.println(usuario);
         Usuario user = usuarioService.autenticar(usuario, senha);
         MensagemRetorno mensagemRetorno;
         if(user == null) {

@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Aplicação de login</string>
+    <string name="app_title">Aplicativo de autenticação</string>
+    <string name="login">Login</string>
+    <string name="cadastro_usuario">Cadastrar usuário</string>
+    <string name="logado">Você está logado!</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="usuario">Usuário:</string>
+    <string name="senha">Senha:</string>
 </resources>
