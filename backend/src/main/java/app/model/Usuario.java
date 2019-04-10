@@ -17,11 +17,9 @@ import java.util.Set;
 @Table(schema = Config.SCHEMA_USUARIOS, name = "usuario")
 public class Usuario implements Serializable {
 
-    private static final String SEQUENCE = Config.SCHEMA_USUARIOS + ".usuario_id_seq";
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = SEQUENCE)
-    @SequenceGenerator(name = SEQUENCE, sequenceName = SEQUENCE, allocationSize = 1)
+    @GeneratedValue
     private Long id;
 
     private String login;
